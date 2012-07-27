@@ -1,0 +1,27 @@
+<h1>Listing marathons</h1>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th>Date</th>
+    <th>Event name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @marathons.each do |marathon| %>
+  <tr>
+    <td><%= marathon.city %></td>
+    <td><%= marathon.date %></td>
+    <td><%= marathon.event_name %></td>
+    <td><%= link_to 'Show', marathon %></td>
+    <td><%= link_to 'Edit', edit_marathon_path(marathon) %></td>
+    <td><%= link_to 'Destroy', marathon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Marathon', new_marathon_path %>

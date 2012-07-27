@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  city: MyString
+  date: 2012-07-27
+  event_name: MyString
+
+two:
+  city: MyString
+  date: 2012-07-27
+  event_name: MyString

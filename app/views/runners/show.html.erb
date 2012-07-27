@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @runner.name %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @runner.dob %>
+</p>
+
+
+<%= link_to 'Edit', edit_runner_path(@runner) %> |
+<%= link_to 'Back', runners_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Marathon:</b>
+  <%= @marathon_runner.marathon_id %>
+</p>
+
+<p>
+  <b>Runners:</b>
+  <%= @marathon_runner.runners_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_marathon_runner_path(@marathon_runner) %> |
+<%= link_to 'Back', marathon_runners_path %>

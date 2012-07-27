@@ -1,0 +1,29 @@
+<%= form_for(@marathon) do |f| %>
+  <% if @marathon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@marathon.errors.count, "error") %> prohibited this marathon from being saved:</h2>
+
+      <ul>
+      <% @marathon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.date_select :date, :start_year => 2000 %>
+  </div>
+  <div class="field">
+    <%= f.label :event_name %><br />
+    <%= f.text_field :event_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

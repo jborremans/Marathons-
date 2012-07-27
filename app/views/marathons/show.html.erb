@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>City:</b>
+  <%= @marathon.city %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @marathon.date %>
+</p>
+
+<p>
+  <b>Event name:</b>
+  <%= @marathon.event_name %>
+</p>
+
+<ul>
+<% @marathon.runners.each do |runner| %>
+  <li>Participant <%=  @runner.dob %></li>
+<% end %>
+</ul>
+
+
+<%= link_to 'Edit', edit_marathon_path(@marathon) %> |
+<%= link_to 'Back', marathons_path %>
